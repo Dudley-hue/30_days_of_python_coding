@@ -263,3 +263,92 @@ print(code.replace('Python for Everyone', 'Python for All'))
 
 #13.Split the string 'Coding For All' using space as the separator (split()) .
 print(company.split( ))
+
+#14."Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" split the string at the comma.
+tech_companies = 'Facebook , Google, Microsoft , Apple ,IBM ,Oracle ,Amazon '
+print(tech_companies.split(',  '))
+
+#15.What is the character at index 0 in the string Coding For All.
+print(company[0])
+
+#16.What is the last index of the string Coding For All.
+print(company[-1])
+
+#17.What character is at index 10 in "Coding For All" string.
+print(company[10])
+
+#18.Create an acronym or an abbreviation for the name 'Python For Everyone'.
+coding = 'Python For Everyone'
+print(coding[0:6:2])
+
+#19.Create an acronym or an abbreviation for the name 'Coding For All'.
+print(company[0:6:2])
+
+#20.Use index to determine the position of the first occurrence of C in Coding For All.
+print(company.index('C'))
+
+#21.Use index to determine the position of the first occurrence of F in Coding For All.
+print(company.index('F'))
+
+#22.Use rfind to determine the position of the last occurrence of l in Coding For All People.
+print(company.rindex('l'))
+
+#23.Use index or find to find the position of the first occurrence of the word 'because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+sentence = 'You cannot end a sentence with because because because is a conjuction'
+print(sentence.index('because'))
+
+#24.Use index or find to find the position of the first occurrence of the word 'because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+print(sentence.rindex('because'))
+
+#25.Slice out the phrase 'because because because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+print(sentence.strip('because because because'))
+
+#26.Find the position of the first occurrence of the word 'because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+print(sentence.find('because'))
+
+#28.Does 'Coding For All' start with a substring Coding?
+print(company.startswith('Coding'))
+
+#29.Does 'Coding For All' end with a substring coding?
+print(company.endswith('coding'))
+
+#30.'   Coding For All      '  , remove the left and right trailing spaces in the given string.
+refactor = '  Coding For All   '
+print(refactor.strip(' '))
+
+#31.Which one of the following variables return True when we use the method isidentifier():
+a = '30DaysOfPython'
+b = 'thirty_days_of_python'
+
+print(a.isidentifier(), b.isidentifier())
+#32.The following list contains the names of some of python libraries: ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']. Join the list with a hash with space string.
+libraries = ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']
+result = '-'.join(libraries)
+print(result)
+
+#33.Use the new line escape sequence to separate the following sentences.
+print('I am enjoying this challenge .\nI just wonder what is next.')
+
+#34.Use a tab escape sequence to write the following lines.
+print('Name\tAge\tCountry\tCity')
+print('Dudley\t21\tKenya\tKitengela')
+
+#35.Use the string formatting method to display the following:
+radius = 10
+area = 3.14 * radius ** 2
+formatted_string = 'The area of a circle is radius %d is %.2f' %(radius,area)
+print(formatted_string)
+
+#36.Make the following using string formatting methods:
+a = 8
+b = 6
+
+print('{} + {} = {}'.format(a,b , a + b))
+print('{} - {} = {}'.format(a,b , a - b))
+print('{} * {} = {}'.format(a,b , a * b))
+print('{} / {} = {}'.format(a,b , a / b))
+print('{} % {} = {}'.format(a,b , a % b))
+print('{} // {} = {}'.format(a,b , a // b))
+print('{} ** {} = {}'.format(a,b , a ** b))
+
+
