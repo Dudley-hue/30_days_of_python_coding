@@ -154,8 +154,8 @@
 
 #5.Print the following pattern:
 
-for number in range(1,11):
-    print(f"{number} * {number} = {number**2}")
+# for number in range(1,11):
+#     print(f"{number} * {number} = {number**2}")
     
 #6.Iterate through the list, ['Python', 'Numpy','Pandas','Django', 'Flask'] using a for loop and print out the items.
 
@@ -170,6 +170,84 @@ for number in range(1,11):
 #         print(number)
 
 #8. Use for loop to iterate from 0 to 100 and print only odd numbers        
-for number in range(0,101):
+# for number in range(0,101):
+#     if number % 2 != 0:
+#         print(number)
+
+##Practice
+##While Loop
+
+# 1.#write a while loop that prints numbers from 1 to 10
+# count = 1
+# while count <= 10:
+#     print(count)
+#     count += 1
+    
+# 2.#Counting backwards from 10 to 1 using a while loop
+# count = 10
+# while count >= 1:
+#     print(count)
+#     count -= 1
+    
+# 3.#Write a while loop that prints the even numbers from 2 to 20
+# count = 2
+# while count <= 20:
+#     print(count)
+#     count += 2
+# 4.#Use a while loop to calculate the sum of numbers from 1 to 100.
+# sum = 0
+# count = 1
+# while count <= 100:
+#     sum += count
+#     count += 1
+# print(f"The sum of numbers from 1 to 100 is: {sum}")
+
+##Multiplication Table
+#Ask the user to enter a number, then use a while loop to generate its multiplication table up to 12.
+# number = int(input("Enter a number: "))
+# count = 1
+# while count <= 12:
+#     product = number * count
+#     print(f"{number} x {count} = {product}")
+#     count += 1
+    
+
+##Create a program that keeps asking the user for a password until they enter the correct password.
+# password = input("Enter the password: ")
+# correct_password = "python123"
+# while password != correct_password:
+#     print("You have entered the wrong password")
+#     password = input("Enter the password: ")
+# else:
+#     print("Access Granted")
+    
+#Exercise:Level 2
+# #1.Use for loop to iterate from 0 to 100 and print the sum of all numbers.
+# sum = 0
+# count = 1
+# while count <= 100:
+#     sum+= count
+#     count+=1
+# print(f"{sum}")
+
+#2.Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+
+# even = 0
+
+# count = 0
+
+# while count <= 100:
+#  if even % 2 == 0:
+#     even += count
+#     count += 2
+# print(f"The sum of all even is {even}")
+
+
+number = 1
+odd_sum = 0
+while number <=100:
     if number % 2 != 0:
-        print(number)
+        odd_sum += number
+
+    number += 1
+print(f"The sum of all odds is {odd_sum}")
