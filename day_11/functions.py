@@ -170,15 +170,56 @@
 ##Exercises : Day 11
 #1.Declare a function add_two_numbers. It takes two parameters and it returns a sum.
 
-def add_two_numbers(num_one,num_two):
-    total = num_one + num_two
-    return total
-print(add_two_numbers(num_one= 1 , num_two=3))
+# def add_two_numbers(num_one,num_two):
+#     total = num_one + num_two
+#     return total
+# print(add_two_numbers(num_one= 1 , num_two=3))
 
 
-#2.Area of a circle is calculated as follows: area = π x r x r. Write a function that calculates area_of_circle.
+# #2.Area of a circle is calculated as follows: area = π x r x r. Write a function that calculates area_of_circle.
 
-def area_of_circle(r):
-    area = 3.14 * r ** 2
-    return area
-print(area_of_circle(5))    
+# def area_of_circle(r):
+#     area = 3.14 * r ** 2
+#     return area
+# print(area_of_circle(5))    
+
+
+#3.Write a function called add_all_nums which takes arbitrary number of arguments and sums all the arguments. Check if all the list items are number types. If not do give a reasonable feedback.
+# def add_all_nums(*args):
+#    total = 0
+   
+#    for num in args:
+#        if not isinstance(num,(int,float)):
+#            return "All arguments must be numbers."
+       
+#        total += num
+       
+#    return total
+
+# print(add_all_nums(10,20,30,40))
+
+
+# #4.Temperature in °C can be converted to °F using this formula: °F = (°C x 9/5) + 32. Write a function which converts °C to °F, convert_celsius_to-fahrenheit.
+# def convert_celsius_to_fahrenheit(celsius):
+#     fahrenheit = (celsius * 9/5) + 32
+#     return fahrenheit
+# print(convert_celsius_to_fahrenheit(35))
+
+
+#5.Write a function called check-season, it takes a month parameter and returns the season: Autumn, Winter, Spring or Summer.
+def check_season(season):
+    
+ if season in ('September','October','November'):
+    return('Autumn')
+ elif season in ('December','January','February'):
+    return('Winter')
+ elif season in ('March', 'April','May'):
+    return('Spring')
+ elif season in ('June','July','August'):
+    return('Summer')
+ else:
+    return('The month you enter is not valid')
+
+season = input("Enter the month : ")
+
+print(check_season(season))    
