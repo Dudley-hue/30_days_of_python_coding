@@ -27,7 +27,7 @@ student['address'] = {
 
 print(student)
 
-#4.Get the length of the studen_8t dictionary
+#4.Get the length of the student dictionary
 
 print(len(student))
 
