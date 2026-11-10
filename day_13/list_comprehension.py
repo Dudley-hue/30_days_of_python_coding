@@ -96,35 +96,47 @@
 #1.Filter only negative and zero in the list using list comprehension
 
 numbers = [-4, -3, -2, -1, 0, 2, 4, 6]
-positive_numbers = [i for i in numbers if i > 0]
-print(positive_numbers)
+# positive_numbers = [i for i in numbers if i <= 0]
+# print(positive_numbers)
 
-#2.Flatten the following list of lists of lists to a one dimensional list :
+even_numbers = [i * i for i in numbers if i % 2 == 0 and i > 0]
+print(even_numbers)
 
-list_of_lists =[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-flattened_list = [number for row in list_of_lists for number in row ]
-print(flattened_list)
+# #2.Flatten the following list of lists of lists to a one dimensional list :
 
-#3.Using list comprehension create the following list of tuples:
+# list_of_lists =[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+# flattened_list = [number for row in list_of_lists for number in row ]
+# print(flattened_list)
 
-numbers = [(i,i * i ) for i in range(5)]
-print(numbers)
+# #3.Using list comprehension create the following list of tuples:
 
-
-#4.Flatten the following list to a new list:
-
-countries = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
-
-flattened_countries = [letter for row in countries for letter in row]
-print (flattened_countries)
-
-#5.Change the following list to a list of dictionaries:
-
-print((flattened_countries))
+# numbers = [(i,i * i ) for i in range(5)]
+# print(numbers)
 
 
-#6.Change the following list of lists to a list of concatenated strings:
+# #4.Flatten the following list to a new list:
+
+# countries = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
+# country_cities = [f"{last} is the capital city of {first}" for country in countries for first,last in country]
+# print(country_cities)
+# flattened_countries = [pair for row in countries for pair in row]
+# print (flattened_countries)
+
+# # #5.Change the following list to a list of dictionaries:
+# countries_dicts = [{'country':country, 'city':city} for country , city in flattened_countries]
+# print((countries_dicts))
+
+
+# #6.Change the following list of lists to a list of concatenated strings:
 
 names = [[('Asabeneh', 'Yetayeh')], [('David', 'Smith')], [('Donald', 'Trump')], [('Bill', 'Gates')]]
-conc = [name for row in names for name in row]
-print(conc)
+# full_names = [f"{first} {last}" for row in names for first,last in row]
+# print(full_names)
+name_pairs = [pair for row in names for pair in row]
+# print(name_pairs)
+# names = [f"The full name is  {name1} {name2}" for row in names for name1,name2 in row]
+# print(names)
+
+name_pairs = [pair for row in names for pair in row]   # step 1 (flatten)
+last_names = [last for first, last in name_pairs]      # step 2 (last names only)
+print(last_names)  # ['Yetayeh', 'Smith', 'Trump', 'Gates']
